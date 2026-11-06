@@ -1,0 +1,18 @@
+#root {
+  min-height: 100vh;
+}
+.welcome { min-height: 100vh;background-color: #0D1728;color: white;
+  display: flex;flex-direction: column;justify-content: center;align-items: center;
+  text-align: center;}
+.logo {font-size: 70px;font-weight: bold;margin: 0;}
+.arabic-logo {
+  font-size: 28px;
+  color: #39F5C5;
+  margin: 0;
+}
+
+.slogan {
+  font-size: 20px;
+  margin-top: 30px;
+  color: #F3FAF8;
+}
