@@ -1,0 +1,541 @@
+/* MAIN EXPERIENCE */
+
+.home-experience {
+    position: relative;
+    isolation: isolate;
+    height: calc(100dvh - 78px);
+    min-height: 0;
+    overflow: hidden;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px 4% 22px;
+
+    background:
+        linear-gradient(90deg,
+            rgba(5, 17, 29, 0.94) 0%,
+            rgba(5, 17, 29, 0.75) 30%,
+            rgba(5, 17, 29, 0.18) 80%),
+        url("/images/mountains.jpg") center / cover no-repeat,
+        #0D1728;
+}
+
+.home-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+        linear-gradient(180deg,
+            transparent 45%,
+            rgba(4, 15, 27, 0.6) 100%),
+        radial-gradient(circle at 75% 40%,
+            rgba(57, 245, 197, 0.08),
+            transparent 45%);
+}
+
+/* HERO */
+
+.experience-content {
+    flex: 1;
+    min-height: 0;
+    display: grid;
+    grid-template-columns: 47% 53%;
+    align-items: center;
+}
+
+.experience-copy {
+    position: relative;
+    z-index: 2;
+    padding-left: 2%;
+}
+
+.experience-eyebrow {
+    color: #39F5C5;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.experience-copy h1 {
+    font-size: clamp(34px, 4.1vw, 70px);
+    line-height: 1.12;
+    letter-spacing: -2px;
+    margin: 20px 0;
+}
+
+.experience-copy h1 span {
+    color: #39F5C5;
+}
+
+.experience-copy p {
+    max-width: 460px;
+    color: #e1eaf0;
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.experience-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    padding: 15px 35px;
+    border-radius: 40px;
+    background: #39F5C5;
+    color: #0D1728;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 800;
+    box-shadow: 0 0 25px rgba(57, 245, 197, 0.3);
+    transition: 0.3s;
+}
+
+.experience-cta:hover {
+    transform: translateY(-4px);
+    background: #7dffe0;
+    box-shadow: 0 0 35px rgba(57, 245, 197, 0.6);
+}
+
+/* ROUTE */
+
+.experience-route {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+}
+
+.experience-route-svg {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+.experience-route-glow {
+    fill: none;
+    stroke: #39F5C5;
+    stroke-width: 15;
+    opacity: 0.4;
+}
+
+.experience-route-line {
+    fill: none;
+    stroke: #39F5C5;
+    stroke-width: 5;
+    stroke-linecap: round;
+    stroke-dasharray: 10 13;
+    filter: drop-shadow(0 0 7px #39F5C5);
+    animation: glowingRoute 3s linear infinite;
+}
+
+@keyframes glowingRoute {
+    to {
+        stroke-dashoffset: -46;
+    }
+}
+
+.experience-car {
+    filter: drop-shadow(0 0 12px #39F5C5);
+}
+
+.experience-location {
+    position: absolute;
+    z-index: 2;
+    padding: 9px 17px;
+    border-radius: 30px;
+    border: 1px solid rgba(120, 255, 224, 0.35);
+    background: rgba(5, 18, 30, 0.8);
+    backdrop-filter: blur(12px);
+    font-size: 14px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.experience-location span {
+    color: #39F5C5;
+}
+
+.location-start {
+    top: 8%;
+    right: 14%;
+}
+
+.location-end {
+    bottom: 10%;
+    left: 12%;
+}
+
+/* FLOATING RIDES */
+
+.floating-rides {
+    position: relative;
+    z-index: 3;
+    flex: 0 0 auto;
+}
+
+.floating-rides-heading {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 0 0 18px 6%;
+}
+
+.floating-rides-heading>span {
+    color: #39F5C5;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+}
+
+.floating-rides-heading strong {
+    font-size: 21px;
+}
+
+.floating-rides-heading small {
+    color: #d0e0e5;
+    font-size: 11px;
+}
+
+.floating-carousel {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.floating-arrow {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    border: 1px solid #39F5C5;
+    border-radius: 50%;
+    background: rgba(7, 28, 37, 0.75);
+    color: #39F5C5;
+    font-size: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.floating-arrow:hover {
+    background: #39F5C5;
+    color: #0D1728;
+    transform: scale(1.1);
+}
+
+.floating-card-list {
+    flex: 1;
+    min-width: 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: center;
+    gap: 18px;
+}
+
+.floating-ride-card {
+    min-width: 0;
+    padding: 20px;
+    border: 1px solid rgba(130, 255, 229, 0.3);
+    border-radius: 24px;
+    background: rgba(14, 43, 57, 0.64);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.24);
+    transition:
+        transform 0.3s,
+        border-color 0.3s,
+        box-shadow 0.3s;
+}
+
+/* HOVER ONLY WHEN MOUSE IS OVER CARD */
+
+@media (hover: hover) {
+    .floating-ride-card:hover {
+        transform: translateY(-6px);
+        border-color: #39F5C5;
+        box-shadow:
+            0 0 28px rgba(57, 245, 197, 0.35),
+            0 18px 40px rgba(0, 0, 0, 0.3);
+    }
+}
+
+.floating-driver {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.floating-avatar {
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: #39F5C5;
+    color: #0D1728;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.floating-driver strong {
+    font-size: 17px;
+}
+
+.floating-status {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #39F5C5;
+    box-shadow: 0 0 10px #39F5C5;
+}
+
+.floating-ride-card h3 {
+    font-size: 17px;
+    margin: 16px 0;
+}
+
+.floating-ride-card h3 span {
+    color: #39F5C5;
+}
+
+.floating-ride-meta {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    color: #d7e8ed;
+    font-size: 13px;
+}
+
+.floating-card-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin-top: 18px;
+}
+
+.floating-card-bottom>strong {
+    font-size: 22px;
+    color: #39F5C5;
+}
+
+.floating-card-bottom small {
+    color: #e1eaf0;
+    font-size: 11px;
+}
+
+.floating-card-bottom button {
+    padding: 10px 15px;
+    border: 0;
+    border-radius: 25px;
+    background: rgba(57, 245, 197, 0.18);
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.floating-card-bottom button:hover {
+    background: #39F5C5;
+    color: #0D1728;
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.carousel-dots button {
+    width: 9px;
+    height: 9px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: #52777b;
+    cursor: pointer;
+}
+
+.carousel-dots button.active {
+    background: #39F5C5;
+    box-shadow: 0 0 12px #39F5C5;
+    transform: scale(1.3);
+}
+
+/* RIDE DETAILS MODAL */
+
+.experience-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.75);
+}
+
+.experience-modal {
+    position: relative;
+    width: 100%;
+    max-width: 430px;
+    max-height: 90dvh;
+    overflow-y: auto;
+    padding: 32px;
+    border: 1px solid #39F5C5;
+    border-radius: 24px;
+    background: #102c3b;
+    box-shadow: 0 20px 70px #0009;
+}
+
+.experience-modal h2 {
+    font-size: 24px;
+}
+
+.experience-modal p {
+    color: #d7e8ed;
+    margin: 16px 0;
+}
+
+.experience-modal .experience-cta {
+    margin-top: 15px;
+}
+
+.experience-modal-close {
+    position: absolute;
+    top: 16px;
+    right: 18px;
+    border: 0;
+    background: transparent;
+    color: white;
+    font-size: 23px;
+    cursor: pointer;
+}
+
+/* SHORT LAPTOP SCREENS */
+
+@media (min-width: 901px) and (max-height: 800px) {
+    .home-experience {
+        padding-top: 12px;
+        padding-bottom: 10px;
+    }
+
+    .experience-copy h1 {
+        font-size: clamp(30px, 3.3vw, 52px);
+        margin: 10px 0;
+    }
+
+    .experience-copy p {
+        font-size: 14px;
+        line-height: 1.5;
+        margin-bottom: 15px;
+    }
+
+    .experience-cta {
+        padding: 11px 24px;
+    }
+
+    .floating-rides-heading {
+        margin-bottom: 12px;
+    }
+
+    .floating-ride-card {
+        padding: 13px 16px;
+    }
+
+    .floating-ride-card h3 {
+        margin: 9px 0;
+    }
+
+    .floating-card-bottom {
+        margin-top: 10px;
+    }
+
+    .carousel-dots {
+        margin-top: 10px;
+    }
+}
+
+/* TABLET AND MOBILE */
+
+@media (max-width: 900px) {
+    .home-experience {
+        height: auto;
+        min-height: calc(100dvh - 78px);
+        overflow: visible;
+        padding: 35px 5%;
+    }
+
+    .experience-content {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-copy {
+        text-align: center;
+    }
+
+    .experience-copy p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .experience-route {
+        height: 280px;
+    }
+
+    .floating-rides-heading {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    .floating-card-list {
+        grid-template-columns: 1fr;
+    }
+
+    .floating-ride-card:not(.center-card) {
+        display: none;
+    }
+
+    .floating-carousel {
+        gap: 10px;
+    }
+
+    .floating-arrow {
+        width: 38px;
+        height: 38px;
+    }
+}
+
+@media (max-width: 480px) {
+    .experience-copy h1 {
+        font-size: 38px;
+    }
+
+    .experience-copy p {
+        font-size: 14px;
+    }
+
+    .experience-route {
+        height: 220px;
+    }
+
+    .floating-ride-card {
+        padding: 15px;
+    }
+
+    .floating-ride-meta {
+        flex-wrap: wrap;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .experience-route-line {
+        animation: none;
+    }
+
+    .experience-car {
+        display: none;
+    }
+}
