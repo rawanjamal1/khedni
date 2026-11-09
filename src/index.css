@@ -1,8 +1,30 @@
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #ffffff;
+  background: #0D1728;
+
+  --accent-color: #39F5C5;
+  --primary-dark: #0D1728;
+  --secondary-dark: #24374A;
+  --light-background: #F3FAF8;
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  min-width: 320px;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
 }

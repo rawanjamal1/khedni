@@ -1,44 +1,77 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import "./ChooseRole.css";
 
 function ChooseRole() {
-  const [role, setRole] = useState("");
+  const [selectedRole, setSelectedRole] = useState("");
+  const navigate = useNavigate();
+
+  function handleContinue() {
+    if (selectedRole === "passenger") {
+      navigate("/passenger");
+    } else if (selectedRole === "driver") {
+      navigate("/driver");
+    }
+  }
 
   return (
     <main className="choose-role-page">
-      <Link to="/" className="back-link">
-        ← Back Home
-      </Link>
+      <div className="choose-role-content">
+        <p className="role-label">WELCOME TO KHEDNI</p>
 
-      <h1>How are you riding today?</h1>
-      <p>Choose your role to get started with Khedni.</p>
+        <h1>
+          Your journey starts <span>here.</span>
+        </h1>
 
-      <div className="role-options">
-        <button
-          className={role === "Passenger" ? "role active" : "role"}
-          onClick={() => setRole("Passenger")}
-        >
-          <span>♙</span>
-          <strong>Passenger</strong>
-          <small>Find or request a ride</small>
-        </button>
+        <p className="role-description">
+          How would you like to use Khedni today?
+        </p>
 
-        <button
-          className={role === "Driver" ? "role active" : "role"}
-          onClick={() => setRole("Driver")}
-        >
-          <span>🚕</span>
-          <strong>Driver</strong>
-          <small>Browse requests and offer rides</small>
-        </button>
-      </div>
+        <div className="role-options">
+          <button
+            type="button"
+            className={`role-option ${
+              selectedRole === "passenger" ? "selected" : ""
+            }`}
+            onClick={() => setSelectedRole("passenger")}
+          >
+            <div className="role-icon">👤</div>
+            <h2>Passenger</h2>
+            <p>Find a ride or request a trip.</p>
+            <span className="role-select-text">
+              {selectedRole === "passenger"
+                ? "✓ Selected"
+                : "Choose Passenger →"}
+            </span>
+          </button>
 
-      {role && (
-        <div className="role-message">
-          You selected <strong>{role}</strong>.
-          <p>Your {role} dashboard is coming next.</p>
+          <button
+            type="button"
+            className={`role-option ${
+              selectedRole === "driver" ? "selected" : ""
+            }`}
+            onClick={() => setSelectedRole("driver")}
+          >
+            <div className="role-icon">🚕</div>
+            <h2>Driver</h2>
+            <p>View requests and connect with passengers.</p>
+            <span className="role-select-text">
+              {selectedRole === "driver" ? "✓ Selected" : "Choose Driver →"}
+            </span>
+          </button>
         </div>
-      )}
+
+        <button
+          type="button"
+          className="role-continue"
+          onClick={handleContinue}
+          disabled={!selectedRole}
+        >
+          Continue →
+        </button>
+
+        <p className="role-footer">Same route. Better connections.</p>
+      </div>
     </main>
   );
 }

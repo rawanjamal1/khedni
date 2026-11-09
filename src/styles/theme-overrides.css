@@ -1,0 +1,65 @@
+:root {
+    --accent-color: #39F5C5;
+}
+
+/* Global theme accents */
+.brand-arabic,
+.nav-links a:hover,
+.nav-links a.active,
+.role-label,
+.choose-role-content h1 span,
+.role-select-text {
+    color: var(--accent-color);
+}
+
+.role-continue {
+    background-color: var(--accent-color);
+    color: #0D1728;
+}
+
+.role-option:hover,
+.role-option.selected {
+    border-color: var(--accent-color);
+}
+
+.role-option.selected {
+    box-shadow: 0 0 30px color-mix(in srgb, var(--accent-color) 25%, transparent);
+}
+
+/* Home accents */
+.experience-eyebrow,
+.experience-copy h1 span,
+.experience-location span,
+.floating-rides-heading>span,
+.floating-ride-card h3 span,
+.floating-card-bottom>strong {
+    color: var(--accent-color);
+}
+
+.experience-cta,
+.floating-avatar,
+.floating-status {
+    background-color: var(--accent-color);
+}
+
+.experience-route-glow,
+.experience-route-line {
+    stroke: var(--accent-color);
+}
+
+.experience-route-svg circle {
+    fill: var(--accent-color);
+}
+
+.floating-arrow,
+.floating-ride-card:hover {
+    border-color: var(--accent-color);
+}
+
+.floating-arrow {
+    color: var(--accent-color);
+}
+
+.carousel-dots button.active {
+    background-color: var(--accent-color);
+}

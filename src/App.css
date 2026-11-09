@@ -1,87 +1,30 @@
 #root {
   min-height: 100vh;
+  background: #0D1728;
 }
 
-.choose-role-page {
-  min-height: calc(100vh - 80px);
-  padding: 70px 20px;
+.temporary-page {
+  min-height: calc(100dvh - 78px);
   background:
-    radial-gradient(circle at 50% 20%, #164c50, transparent 55%),
-    #0D1728;
-  color: white;
-  text-align: center;
-}
+    linear-gradient(rgba(7, 20, 34, 0.92),
+      rgba(7, 20, 34, 0.8)),
+    url("/images/mountains.jpg") center / cover no-repeat;
 
-.choose-role-page h1 {
-  font-size: clamp(30px, 5vw, 48px);
-  margin-top: 45px;
-}
-
-.choose-role-page>p {
-  color: #b9cbd3;
-}
-
-.back-link {
-  color: #39F5C5;
-  text-decoration: none;
-}
-
-.role-options {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 25px;
-  margin: 50px auto;
-}
-
-.role {
-  width: 250px;
-  min-height: 220px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  gap: 15px;
-  border: 1px solid #35536a;
-  border-radius: 24px;
-  background: #142b3b;
+  align-items: center;
+  text-align: center;
   color: white;
-  cursor: pointer;
-  transition: 0.3s;
+  padding: 30px;
 }
 
-.role:hover,
-.role.active {
-  border-color: #39F5C5;
-  transform: translateY(-6px);
-  box-shadow: 0 0 25px #39f5c533;
+.temporary-page h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
 }
 
-.role span {
-  font-size: 45px;
-}
-
-.role strong {
-  font-size: 23px;
-}
-
-.role small {
-  color: #b9cbd3;
-}
-
-.role-message {
-  max-width: 450px;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #39F5C5;
-  border-radius: 15px;
-  background: #142b3b;
-}
-
-.role-message strong {
+.temporary-page p {
   color: #39F5C5;
-}
-
-.role-message p {
-  color: #b9cbd3;
+  font-size: 18px;
 }

@@ -1,163 +1,95 @@
 .navbar {
     height: 78px;
     width: 100%;
+    padding: 0 4%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 25px;
-    padding: 0 5%;
-    background: #091522;
-    border-bottom: 1px solid #24374A;
+    background: #0D1728;
     position: relative;
-    z-index: 10;
+    z-index: 50;
 }
-
-/* LOGO */
 
 .brand {
     display: flex;
-    align-items: baseline;
-    gap: 6px;
+    flex-direction: column;
     text-decoration: none;
-    flex-shrink: 0;
+    line-height: 1;
 }
 
 .brand-name {
-    color: #FFFFFF;
-    font-size: 29px;
+    font-size: 28px;
     font-weight: 800;
-    letter-spacing: -1px;
+    color: white;
 }
 
 .brand-arabic {
-    color: #39F5C5;
-    font-size: 17px;
-    font-weight: bold;
+    margin-top: 4px;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--accent-color);
 }
 
-/* NAVIGATION LINKS */
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
 
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 28px;
 }
 
 .nav-links a {
-    color: #D6E4E9;
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 500;
-    transition: color 0.2s ease;
-}
-
-.nav-links a:hover {
-    color: #39F5C5;
-}
-
-.nav-links a.active {
-    color: #39F5C5;
-}
-
-/* GET STARTED BUTTON */
-
-.navbar-cta {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 11px 22px;
-    background: #39F5C5;
-    color: #0D1728;
-    border-radius: 30px;
+    color: #f3faf8;
     text-decoration: none;
     font-size: 14px;
-    font-weight: bold;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--accent-color);
+}
+
+.navbar-cta {
+    padding: 12px 22px;
+    border-radius: 30px;
+    background: var(--accent-color);
+    color: #0D1728;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 13px;
     white-space: nowrap;
-    transition: all 0.3s ease;
 }
 
 .navbar-cta:hover {
-    background: #75FFE0;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 20px #39F5C544;
+    filter: brightness(1.12);
 }
 
-/* TABLET */
-
-@media (max-width: 900px) {
-    .navbar {
-        gap: 15px;
-        padding: 0 3%;
-    }
-
-    .nav-links {
-        gap: 16px;
-    }
-
-    .brand-name {
-        font-size: 25px;
-    }
-
-    .nav-links a {
-        font-size: 13px;
-    }
-
-    .navbar-cta {
-        padding: 10px 15px;
-        font-size: 13px;
-    }
-}
-
-/* MOBILE */
-
-@media (max-width: 700px) {
+@media (max-width: 800px) {
     .navbar {
         height: auto;
         min-height: 78px;
+        padding: 12px 4%;
         flex-wrap: wrap;
-        justify-content: space-between;
-        padding: 14px 5%;
-        gap: 15px;
-    }
-
-    .brand-name {
-        font-size: 24px;
-    }
-
-    .brand-arabic {
-        font-size: 15px;
-    }
-
-    .nav-links {
-        order: 3;
-        width: 100%;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 18px;
-    }
-
-    .nav-links a {
-        font-size: 13px;
-    }
-
-    .navbar-cta {
-        padding: 10px 16px;
-    }
-}
-
-/* SMALL MOBILE */
-
-@media (max-width: 380px) {
-    .nav-links {
         gap: 12px;
     }
 
-    .nav-links a {
-        font-size: 12px;
+    .navbar-right {
+        gap: 12px;
+        flex-wrap: wrap;
     }
 
-    .navbar-cta {
+    .nav-links {
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .nav-links a {
         font-size: 12px;
-        padding: 9px 12px;
     }
 }

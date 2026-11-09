@@ -1,0 +1,145 @@
+.choose-role-page {
+    min-height: calc(100dvh - 78px);
+    background:
+        linear-gradient(120deg,
+            rgba(6, 19, 32, 0.94),
+            rgba(6, 19, 32, 0.7)),
+        url("/images/mountains.jpg") center / cover no-repeat,
+        #0D1728;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px;
+    color: white;
+}
+
+.choose-role-content {
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+}
+
+.role-label {
+    color: #39F5C5;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.choose-role-content h1 {
+    font-size: clamp(32px, 4vw, 54px);
+    margin: 12px 0;
+}
+
+.choose-role-content h1 span {
+    color: #39F5C5;
+}
+
+.role-description {
+    color: #d4e6e8;
+    font-size: 17px;
+    margin-bottom: 35px;
+}
+
+.role-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.role-option {
+    background: rgba(16, 43, 57, 0.72);
+    border: 1px solid rgba(57, 245, 197, 0.25);
+    border-radius: 25px;
+    padding: 38px 25px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    backdrop-filter: blur(15px);
+    transition: 0.3s;
+}
+
+.role-option:hover {
+    transform: translateY(-6px);
+    border-color: #39F5C5;
+    box-shadow: 0 0 25px rgba(57, 245, 197, 0.2);
+}
+
+.role-option.selected {
+    background: rgba(57, 245, 197, 0.16);
+    border: 2px solid #39F5C5;
+    box-shadow: 0 0 30px rgba(57, 245, 197, 0.2);
+}
+
+.role-icon {
+    font-size: 52px;
+    margin-bottom: 10px;
+}
+
+.role-option h2 {
+    font-size: 26px;
+    margin: 12px 0;
+}
+
+.role-option p {
+    color: #d4e6e8;
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+
+.role-select-text {
+    color: #39F5C5;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.role-continue {
+    display: block;
+    margin: 35px auto 0;
+    padding: 15px 60px;
+    background: #39F5C5;
+    border: 0;
+    border-radius: 40px;
+    color: #0D1728;
+    font-size: 16px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.role-continue:hover:not(:disabled) {
+    background: #8affdf;
+    transform: translateY(-3px);
+}
+
+.role-continue:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.role-footer {
+    margin-top: 25px;
+    color: #a9c6c8;
+    font-size: 13px;
+}
+
+@media (max-width: 650px) {
+    .role-options {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .role-option {
+        padding: 25px 15px;
+    }
+
+    .choose-role-page {
+        min-height: calc(100dvh - 78px);
+        padding: 35px 15px;
+    }
+
+    .role-description {
+        margin-bottom: 25px;
+    }
+}

@@ -1,4 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
+import ThemePicker from "./ThemePicker";
 import "./Navbar.css";
 
 function Navbar() {
@@ -9,18 +10,22 @@ function Navbar() {
         <span className="brand-arabic">معك</span>
       </Link>
 
-      <div className="nav-links">
-        <NavLink to="/" end>
-          Home
-        </NavLink>
-        <NavLink to="/services">Rides</NavLink>
-        <NavLink to="/about">About</NavLink>
-        <NavLink to="/contact">Contact</NavLink>
-      </div>
+      <div className="navbar-right">
+        <div className="nav-links">
+          <NavLink to="/" end>
+            Home
+          </NavLink>
+          <NavLink to="/rides">Rides</NavLink>
+          <NavLink to="/about">About</NavLink>
+          <NavLink to="/contact">Contact</NavLink>
+        </div>
 
-      <Link to="/choose-role" className="navbar-cta">
-        Get Started
-      </Link>
+        <ThemePicker />
+
+        <Link to="/choose-role" className="navbar-cta">
+          Get Started
+        </Link>
+      </div>
     </nav>
   );
 }
